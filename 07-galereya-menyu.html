@@ -1,0 +1,71 @@
+<!-- ============================================================
+     ФОРТ УТРИШ · Блок 7 — ГАЛЕРЕЯ МЕНЮ (слайдер страниц меню)
+     Изображения отображаются полностью по высоте (object-fit:contain).
+     Листается стрелками ‹ ›.
+     ============================================================ -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<div class="fu-gal" style="--accent:#C98A4B;--accent-deep:#A86E36;font-family:'Golos Text',system-ui,sans-serif;background:#fff;border-top:1px solid rgba(201,138,75,.16);">
+  <style>
+    .fu-gal *{box-sizing:border-box}
+    .fu-gal .nav-btn{width:52px;height:52px;border-radius:50%;border:1px solid rgba(201,138,75,.4);background:#fff;color:#15282E;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s}
+    .fu-gal .nav-btn:hover{border-color:var(--accent);background:var(--accent);color:#fff}
+    .fu-gal .slide{flex:0 0 auto;width:clamp(240px,64vw,360px)}
+    /* aspect-ratio убран — высоту задаём фиксированную, ширина подстраивается под пропорции картинки */
+    .fu-gal .card{position:relative;width:100%;height:clamp(420px,68vw,640px);border-radius:22px;overflow:hidden;border:1px solid rgba(201,138,75,.2);box-shadow:0 18px 44px rgba(15,42,51,.1);background:#fff;display:flex;align-items:center;justify-content:center}
+    .fu-gal .card img{width:100%;height:100%;object-fit:contain;display:block}
+    .fu-gal .card .lbl{position:absolute;bottom:14px;left:14px;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.08em;color:rgba(15,42,51,.42);text-transform:uppercase}
+  </style>
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,96px) 0 clamp(64px,8vw,104px);">
+    <div style="max-width:1280px;padding:0 clamp(20px,5vw,64px);display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between;margin-bottom:clamp(32px,4vw,48px);">
+      <div style="max-width:640px;">
+        <div style="font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:18px;">Меню</div>
+        <h2 style="font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(30px,4.2vw,52px);line-height:1.1;margin:0;color:#15282E;">Загляните <span style="font-style:italic;color:var(--accent-deep);">в наше меню</span></h2>
+      </div>
+      <div style="display:flex;gap:12px;">
+        <button class="nav-btn" id="fuGalPrev" aria-label="Назад">‹</button>
+        <button class="nav-btn" id="fuGalNext" aria-label="Вперёд">›</button>
+      </div>
+    </div>
+    <div style="overflow:hidden;padding:4px clamp(20px,5vw,64px);">
+      <div id="fuGalTrack" style="display:flex;gap:20px;width:max-content;transition:transform .55s cubic-bezier(.22,.61,.36,1);will-change:transform;">
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild3930-6366-4361-b539-663365396434/1829__4_4_3-04.png" alt="Меню, страница 1"><span class="lbl"></span></div></div>
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild3662-3236-4634-b439-663631643761/1829__4_4_3-05.png" alt="Меню, страница 2"><span class="lbl"></span></div></div>
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild3936-3832-4333-b230-383932613333/1829__4_4_3-06.png" alt="Меню, страница 3"><span class="lbl"></span></div></div>
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild3361-6465-4165-a363-386335316163/1829__4_4_3-07.png" alt="Меню, страница 4"><span class="lbl"></span></div></div>
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild6633-3738-4766-a663-636537303463/1829__4_4_3-08.png" alt="Меню, страница 5"><span class="lbl"></span></div></div>
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild3233-3739-4133-a330-373138323930/1829__4_4_3-09.png" alt="Меню, страница 6"><span class="lbl"></span></div></div>
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild3130-3966-4234-b066-666431356534/1829__4_4_3-10.png" alt="Меню, страница 7"><span class="lbl"></span></div></div>
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild6438-6339-4731-b138-396231373637/1829__4_4_3-11.png" alt="Меню, страница 8"><span class="lbl"></span></div></div>
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild3938-3330-4239-a239-666562613436/1829__4_4_3-12.png" alt="Меню, страница 9"><span class="lbl"></span></div></div>
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild3430-6635-4333-b939-323763343139/1829__4_4_3-13.png" alt="Меню, страница 10"><span class="lbl"></span></div></div>
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild3062-3562-4762-b063-663637643966/1829__4_4_3-14.png" alt="Меню, страница 11"><span class="lbl"></span></div></div>
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild3834-3862-4965-b038-356434366230/1829__4_4_3-15.png" alt="Меню, страница 12"><span class="lbl"></span></div></div>
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild6135-3839-4932-b331-393436326263/1829__4_4_3-16.png" alt="Меню, страница 13"><span class="lbl"></span></div></div>
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild3665-3161-4266-a566-666530633730/1829__4_4_3-17.png" alt="Меню, страница 14"><span class="lbl"></span></div></div>
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild3336-3130-4364-b032-646365633033/1829__4_4_3-18.png" alt="Меню, страница 15"><span class="lbl"></span></div></div>
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild6466-3861-4265-b132-663135353135/1829__4_4_3-19.png" alt="Меню, страница 16"><span class="lbl"></span></div></div>
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild3235-3166-4237-a133-303936396662/1829__4_4_3-20.png" alt="Меню, страница 17"><span class="lbl"></span></div></div>
+        <div class="slide"><div class="card"><img src="https://static.tildacdn.com/tild3439-6465-4361-b261-333234363461/1829__4_4_3-21.png" alt="Меню, страница 18"><span class="lbl"></span></div></div>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    var track=document.getElementById('fuGalTrack');
+    if(!track)return;
+    var vp=track.parentElement, gi=0;
+    function metrics(){
+      var kids=track.children; if(!kids.length)return{step:1,max:0,maxIndex:0};
+      var step=kids.length>1?(kids[1].offsetLeft-kids[0].offsetLeft):(kids[0].offsetWidth+20);
+      var cs=getComputedStyle(vp);
+      var visible=vp.clientWidth-(parseFloat(cs.paddingLeft)||0)-(parseFloat(cs.paddingRight)||0);
+      var max=Math.max(0,track.scrollWidth-visible);
+      return{step:step||1,max:max,maxIndex:step>0?Math.ceil(max/step):0};
+    }
+    function apply(){var m=metrics();var tx=Math.min(gi*m.step,m.max);if(tx<0)tx=0;track.style.transform='translateX(-'+tx+'px)';}
+    document.getElementById('fuGalPrev').onclick=function(){gi=Math.max(0,gi-1);apply();};
+    document.getElementById('fuGalNext').onclick=function(){var m=metrics();gi=Math.min(m.maxIndex,gi+1);apply();};
+    window.addEventListener('resize',apply);
+  })();
+  </script>
+</div>
